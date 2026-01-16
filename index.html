@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interactive Dashboard</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <h2 class="brand">Task-3</h2>
+  <nav>
+    <a class="active">Dashboard</a>
+    <a>Quiz</a>
+    <a>Gallery</a>
+    <a>Jokes</a>
+  </nav>
+</aside>
+
+<!-- MAIN -->
+<div class="main">
+
+<header class="header">
+  <h1>Dashboard</h1>
+  <button class="theme-btn" onclick="toggleTheme()">🌙</button>
+</header>
+
+<section class="cards">
+
+  <!-- QUIZ -->
+  <div class="card">
+    <h3>🧠 Interactive Quiz</h3>
+    <p id="quizCount">Question 1 / 10</p>
+    <div id="loader" class="loader"></div>
+    <p id="question"></p>
+    <div id="options"></div>
+    <p id="quizResult"></p>
+    <p id="score">Score: 0 / 10</p>
+  </div>
+
+  <!-- IMAGE -->
+  <div class="card image-card">
+    <h3>📸 Inspiration Gallery</h3>
+    <img id="galleryImg">
+    <p class="muted">Auto-updating images from API</p>
+  </div>
+
+  <!-- JOKE -->
+  <div class="card">
+    <h3>😄 Random Joke</h3>
+    <div class="joke-box">
+      <p id="joke">Loading joke...</p>
+    </div>
+    <button class="btn" onclick="getJoke()">New Joke</button>
+  </div>
+
+</section>
+
+<!-- PROGRESS -->
+<section class="progress-card">
+  <div>
+    <p class="muted">PROJECT PROGRESS</p>
+    <h2>74%</h2>
+  </div>
+  <div class="progress-bar">
+    <div class="progress-fill"></div>
+  </div>
+</section>
+
+<footer>
+  © 2024 Internship Dashboard
+</footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
